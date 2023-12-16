@@ -1,7 +1,7 @@
 #include "Board.h"
-#include "Typedefs.h"
 
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -10,7 +10,7 @@ int CreateBoard(const int width, const int height, Board* b)
     b->Height = height;
     b->Width = width;
 
-    uint16** tmpContentPtr = (unsigned char**) malloc(width * height * sizeof(unsigned char*));
+    unsigned char** tmpContentPtr = (unsigned char**) malloc(width * height * sizeof(unsigned char*));
 
     // Check if malloc succeded
     if (!tmpContentPtr)

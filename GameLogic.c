@@ -1,5 +1,7 @@
 #include "GameLogic.h"
-#include "Typedefs.h"
+
+#include <stdint.h>
+#include <stdbool.h>
 
 void UpdateGame(Board* main, Board* dummy)
 {
@@ -8,8 +10,8 @@ void UpdateGame(Board* main, Board* dummy)
         for (int j = 0; j < main->Width; j++)
         {
             // Load values
-            const uint16 curCellVal = main->Content[ i ][ j ];
-            uint16 neighboursValues = 0;
+            const uint16_t curCellVal = main->Content[ i ][ j ];
+            uint16_t neighboursValues = 0;
 
             bool up = ( i - 1 ) >= 0,
                 down = ( i + 1 ) < main->Height,

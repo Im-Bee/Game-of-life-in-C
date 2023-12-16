@@ -28,8 +28,5 @@
     <ClInclude Include="GameLogic.h">
       <Filter>Public</Filter>
     </ClInclude>
-    <ClInclude Include="Typedefs.h">
-      <Filter>Public</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
