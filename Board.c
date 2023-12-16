@@ -52,6 +52,11 @@ int CreateBoard(const int width, const int height, Board* b)
     return 1;
 }
 
+int LoadPlayerInput(Board* b)
+{
+    return 0;
+}
+
 void ShowBoard(Board* b)
 {
     // Clear the terminal
@@ -62,7 +67,6 @@ void ShowBoard(Board* b)
     int charIndx = 0;
     for (int i = 0; i < b->Height; i++)
     {
-
         for (int j = 0; j < b->Width; j++)
         {
             unsigned char shownChar;
@@ -73,11 +77,10 @@ void ShowBoard(Board* b)
                 shownChar = EMPTY_BLOCK_CHAR;
 
             // printf("%c", shownChar);
-
             boardCharBuff[ charIndx++ ] = shownChar;
         }
+        
         // printf("\n");
-
         boardCharBuff[ charIndx++ ] = '\n';
     }
 

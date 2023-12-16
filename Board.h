@@ -13,6 +13,8 @@ typedef struct Board
 
 int CreateBoard(const int width, const int height, Board* b);
 
+int LoadPlayerInput(Board* b);
+
 void ShowBoard(Board* b);
 
 void DisposeBoard(Board* b);

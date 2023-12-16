@@ -23,13 +23,12 @@ int main()
         &backBoard))
         return -1;
 
-    ShowBoard(&myBoard);
     for (;;)
     {
-        Sleep(GAME_UPDATE_LATENCY);
-
-        UpdateGame(&myBoard, &backBoard);
         ShowBoard(&myBoard);
+        UpdateGame(&myBoard, &backBoard);
+
+        Sleep(GAME_UPDATE_LATENCY);
     }
 
     DisposeBoard(&myBoard);
