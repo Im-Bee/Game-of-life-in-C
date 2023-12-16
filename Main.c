@@ -23,6 +23,9 @@ int main()
         &backBoard))
         return -1;
 
+    // It does nothing now
+    LoadPlayerInput(&myBoard);
+
     for (;;)
     {
         ShowBoard(&myBoard);

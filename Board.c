@@ -10,7 +10,7 @@ int CreateBoard(const int width, const int height, Board* b)
     b->Height = height;
     b->Width = width;
 
-    uint16_t** tmpContentPtr = (unsigned char**) malloc(width * height * sizeof(unsigned char*));
+    uint16** tmpContentPtr = (unsigned char**) malloc(width * height * sizeof(unsigned char*));
 
     // Check if malloc succeded
     if (!tmpContentPtr)
