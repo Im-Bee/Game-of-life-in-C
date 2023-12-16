@@ -79,8 +79,4 @@ void UpdateGame(Board* main, Board* dummy)
     unsigned char** tmpContentPtr = main->Content;
     main->Content = dummy->Content;
     dummy->Content = tmpContentPtr;
-
-    Board* tmpBoardPtr = main;
-    main = dummy;
-    dummy = tmpBoardPtr;
 }
