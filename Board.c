@@ -58,26 +58,24 @@ int LoadPlayerInput(Board* b)
 void ShowBoard(Board* b)
 {
     // Clear the terminal
+    #ifdef _WIN32
     system("cls");
+    #else
+    system("clear");
+    #endif // _WIN32
 
-    unsigned char boardCharBuff[ 2048 ] = { 0 };
+    static unsigned char boardCharBuff[ 2048 ] = { 0 };
 
     int charIndx = 0;
+    unsigned char shownChar;
     for (int i = 0; i < b->Height; i++)
     {
         for (int j = 0; j < b->Width; j++)
         {
-            unsigned char shownChar;
-
-            if (b->Content[ i ][ j ])
-                shownChar = FULL_BLOCK_CHAR;
-            else
-                shownChar = EMPTY_BLOCK_CHAR;
-
             // printf("%c", shownChar);
-            boardCharBuff[ charIndx++ ] = shownChar;
+            boardCharBuff[ charIndx++ ] = b->Content[i][j] ? FULL_BLOCK_CHAR : EMPTY_BLOCK_CHAR;
         }
-        
+
         // printf("\n");
         boardCharBuff[ charIndx++ ] = '\n';
     }

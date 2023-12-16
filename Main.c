@@ -1,7 +1,9 @@
 #include "Board.h"
 #include "GameLogic.h"
 
+#ifdef _WIN32
 #include <windows.h>
+#endif // _WIN32
 
 #define BOARD_SIZE_W 80
 #define BOARD_SIZE_H 16
@@ -31,7 +33,9 @@ int main()
         ShowBoard(&myBoard);
         UpdateGame(&myBoard, &backBoard);
 
+        #ifdef _WIN32
         Sleep(GAME_UPDATE_LATENCY);
+        #endif // _WIN32
     }
 
     DisposeBoard(&myBoard);
