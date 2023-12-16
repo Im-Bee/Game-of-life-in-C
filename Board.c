@@ -3,13 +3,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int CreateBoard(const int width, const int height, Board* b)
 {
     b->Height = height;
     b->Width = width;
 
-    uint16_t** tmpContentPtr = (unsigned char**) malloc(height * sizeof(unsigned char*));
+    uint16_t** tmpContentPtr = (unsigned char**) malloc(width * height * sizeof(unsigned char*));
 
     // Check if malloc succeded
     if (!tmpContentPtr)
@@ -56,22 +57,32 @@ void ShowBoard(Board* b)
     // Clear the terminal
     system("cls");
 
+    unsigned char boardCharBuff[ 2048 ] = { 0 };
+
+    int charIndx = 0;
     for (int i = 0; i < b->Height; i++)
     {
+
         for (int j = 0; j < b->Width; j++)
         {
-            uint16_t shownChar;
+            unsigned char shownChar;
 
             if (b->Content[ i ][ j ])
                 shownChar = FULL_BLOCK_CHAR;
             else
                 shownChar = EMPTY_BLOCK_CHAR;
 
-            printf("%c", shownChar);
-        }
+            // printf("%c", shownChar);
 
-        printf("\n");
+            boardCharBuff[ charIndx++ ] = shownChar;
+        }
+        // printf("\n");
+
+        boardCharBuff[ charIndx++ ] = '\n';
     }
+
+    boardCharBuff[ charIndx ] = '\0';
+    printf("%s", boardCharBuff);
 }
 
 void DisposeBoard(Board* b)
