@@ -17,9 +17,18 @@
     <ClCompile Include="Board.c">
       <Filter>Private</Filter>
     </ClCompile>
+    <ClCompile Include="GameLogic.c">
+      <Filter>Private</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Typedefs.h">
       <Filter>Public</Filter>
     </ClInclude>
   </ItemGroup>
