@@ -12,7 +12,6 @@ int CreateBoard(const int width, const int height, Board* b)
 
     unsigned char** tmpContentPtr = (unsigned char**) malloc(width * height * sizeof(unsigned char*));
 
-    // Check if malloc succeded
     if (!tmpContentPtr)
         return 0;
 
@@ -20,7 +19,6 @@ int CreateBoard(const int width, const int height, Board* b)
     {
         tmpContentPtr[ i ] = (unsigned char*) malloc(width * sizeof(unsigned char));
 
-        // Check if malloc succeded
         if (!tmpContentPtr[ i ])
             return 0;
 
