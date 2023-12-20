@@ -3,6 +3,8 @@
 
 #ifdef _WIN32
 #include <windows.h>
+#else
+#include <unistd.h>
 #endif // _WIN32
 
 #define BOARD_SIZE_W 80
@@ -35,6 +37,8 @@ int main()
 
         #ifdef _WIN32
         Sleep(GAME_UPDATE_LATENCY);
+        #else
+        sleep(GAME_UPDATE_LATENCY / 100);	
         #endif // _WIN32
     }
 

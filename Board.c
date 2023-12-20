@@ -67,7 +67,7 @@ void ShowBoard(Board* b)
     static unsigned char boardCharBuff[ 2048 ] = { 0 };
 
     int charIndx = 0;
-    unsigned char shownChar;
+    // unsigned char shownChar;
     for (int i = 0; i < b->Height; i++)
     {
         for (int j = 0; j < b->Width; j++)

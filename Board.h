@@ -1,8 +1,8 @@
 #ifndef BOARD
 #define BOARD
 
-#define EMPTY_BLOCK_CHAR 176
-#define FULL_BLOCK_CHAR 178
+#define EMPTY_BLOCK_CHAR 32 
+#define FULL_BLOCK_CHAR 35
 
 typedef struct Board
 {
