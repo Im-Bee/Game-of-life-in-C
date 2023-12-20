@@ -26,25 +26,6 @@ int CreateBoard(const int width, const int height, Board* b)
             tmpContentPtr[ i ][ j ] = 0;
     }
 
-    // DEBUG
-    {
-        tmpContentPtr[ 2 ][ 2 ] = 1;
-        tmpContentPtr[ 2 ][ 4 ] = 1;
-        tmpContentPtr[ 3 ][ 3 ] = 1;
-        tmpContentPtr[ 3 ][ 1 ] = 1;
-        tmpContentPtr[ 2 ][ 2 ] = 1;
-        tmpContentPtr[ 2 ][ 3 ] = 1;
-        tmpContentPtr[ 2 ][ 4 ] = 1;
-        tmpContentPtr[ 3 ][ 2 ] = 1;
-        tmpContentPtr[ 3 ][ 3 ] = 1;
-        tmpContentPtr[ 4 ][ 2 ] = 1;
-        tmpContentPtr[ 4 ][ 4 ] = 1;
-        tmpContentPtr[ 3 ][ 5 ] = 1;
-        tmpContentPtr[ 3 ][ 4 ] = 1;
-        tmpContentPtr[ 2 ][ 5 ] = 1;
-        tmpContentPtr[ 2 ][ 6 ] = 1;
-    }
-
     b->Content = tmpContentPtr;
 
     return 1;
@@ -52,6 +33,25 @@ int CreateBoard(const int width, const int height, Board* b)
 
 int LoadPlayerInput(Board* b)
 {
+    // DEBUG
+    {
+        b->Content[ 2 ][ 2 ] = 1;
+        b->Content[ 2 ][ 4 ] = 1;
+        b->Content[ 3 ][ 3 ] = 1;
+        b->Content[ 3 ][ 1 ] = 1;
+        b->Content[ 2 ][ 2 ] = 1;
+        b->Content[ 2 ][ 3 ] = 1;
+        b->Content[ 2 ][ 4 ] = 1;
+        b->Content[ 3 ][ 2 ] = 1;
+        b->Content[ 3 ][ 3 ] = 1;
+        b->Content[ 4 ][ 2 ] = 1;
+        b->Content[ 4 ][ 4 ] = 1;
+        b->Content[ 3 ][ 5 ] = 1;
+        b->Content[ 3 ][ 4 ] = 1;
+        b->Content[ 2 ][ 5 ] = 1;
+        b->Content[ 2 ][ 6 ] = 1;
+    }
+
     return 0;
 }
 
