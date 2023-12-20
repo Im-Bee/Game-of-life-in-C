@@ -1,1 +1,1 @@
-Raw Conway's Game of Life in windows terminal writen in C
+Raw Conway's Game of Life in windows/linux terminal writen in C
