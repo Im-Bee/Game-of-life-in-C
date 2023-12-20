@@ -10,7 +10,7 @@
 #define BOARD_SIZE_W 80
 #define BOARD_SIZE_H 16
 
-#define GAME_UPDATE_LATENCY 100
+#define GAME_UPDATE_LATENCY 125
 
 int main()
 {
@@ -38,7 +38,7 @@ int main()
         #ifdef _WIN32
         Sleep(GAME_UPDATE_LATENCY);
         #else
-        sleep(GAME_UPDATE_LATENCY / 100);	
+        usleep((GAME_UPDATE_LATENCY * 1000));
         #endif // _WIN32
     }
 
