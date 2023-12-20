@@ -10,14 +10,14 @@ int CreateBoard(const int width, const int height, Board* b)
     b->Height = height;
     b->Width = width;
 
-    unsigned char** tmpContentPtr = (unsigned char**) malloc(width * height * sizeof(unsigned char*));
+    unsigned char** tmpContentPtr = (unsigned char**) malloc(sizeof(unsigned char*) * width * height);
 
     if (!tmpContentPtr)
         return 0;
 
     for (int i = 0; i < height; i++)
     {
-        tmpContentPtr[ i ] = (unsigned char*) malloc(width * sizeof(unsigned char));
+        tmpContentPtr[ i ] = (unsigned char*) malloc(sizeof(unsigned char) * width);
 
         if (!tmpContentPtr[ i ])
             return 0;
@@ -81,8 +81,8 @@ void ShowBoard(Board* b)
 
             boardCharBuff[ charIndx++ ] = b->Content[i][j] ? FULL_BLOCK_CHAR : EMPTY_BLOCK_CHAR;
         }
-
         // printf("\n");
+
         boardCharBuff[ charIndx++ ] = '\n';
     }
 

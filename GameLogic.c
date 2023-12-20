@@ -77,7 +77,7 @@ void UpdateGame(Board* main, Board* dummy)
         }
     }
 
-    // Switch updated board with main board
+    // Switch updated content of dummy board with content of main board
     unsigned char** tmpContentPtr = main->Content;
     main->Content = dummy->Content;
     dummy->Content = tmpContentPtr;
