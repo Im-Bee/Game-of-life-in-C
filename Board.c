@@ -7,6 +7,10 @@
 
 int CreateBoard(const int width, const int height, Board* b)
 {
+    // Just to be safe
+    if (width < 1 || height < 1)
+        return 0;
+
     b->Height = height;
     b->Width = width;
 
