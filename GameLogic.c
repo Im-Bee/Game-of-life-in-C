@@ -10,8 +10,8 @@ void UpdateGame(Board* main, Board* dummy)
         for (int j = 0; j < main->Width; j++)
         {
             // Load values
-            const uint16_t curCellVal = main->Content[ i ][ j ];
-            uint16_t neighboursValues = 0;
+            const uint8_t curCellVal = main->Content[ i ][ j ];
+            uint8_t neighboursValues = 0;
 
             bool up = ( i - 1 ) >= 0,
                 down = ( i + 1 ) < main->Height,
