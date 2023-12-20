@@ -1,5 +1,5 @@
-#ifndef BOARD
-#define BOARD
+#ifndef BOARD_H
+#define BOARD_H
 
 #define EMPTY_BLOCK_CHAR 32 
 #define FULL_BLOCK_CHAR 35
@@ -19,4 +19,4 @@ void ShowBoard(Board* b);
 
 void DisposeBoard(Board* b);
 
-#endif // !BOARD
+#endif // !BOARD_H

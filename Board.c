@@ -72,7 +72,13 @@ void ShowBoard(Board* b)
     {
         for (int j = 0; j < b->Width; j++)
         {
+            // if (b->Content[ i ][ j ])
+            //     shownChar = FULL_BLOCK_CHAR;
+            // else
+            //     shownChar = EMPTY_BLOCK_CHAR;
+            //
             // printf("%c", shownChar);
+
             boardCharBuff[ charIndx++ ] = b->Content[i][j] ? FULL_BLOCK_CHAR : EMPTY_BLOCK_CHAR;
         }
 
