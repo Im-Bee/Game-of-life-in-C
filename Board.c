@@ -14,7 +14,7 @@ int CreateBoard(const int width, const int height, Board* b)
     b->Height = height;
     b->Width = width;
 
-    unsigned char** tmpContentPtr = (unsigned char**) malloc(sizeof(unsigned char*) * width * height);
+    unsigned char** tmpContentPtr = (unsigned char**) malloc(sizeof(unsigned char*) * height);
 
     if (!tmpContentPtr)
         return 0;
